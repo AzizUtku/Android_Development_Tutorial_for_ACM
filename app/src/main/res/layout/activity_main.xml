@@ -28,10 +28,24 @@
     </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/main_bnv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:layout_alignParentBottom="true"
-        app:menu="" />
+        android:background="#fff"
+        app:itemIconTint="@color/selector_menu_color"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/main_menu"
+        android:theme="@style/Widget.MaterialComponents.BottomNavigationView"/>
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_bnv"
+        android:layout_below="@id/toolbar">
+
+    </FrameLayout>
 
 
 </RelativeLayout>
